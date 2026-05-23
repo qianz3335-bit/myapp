@@ -9,7 +9,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-DEEPSEEK_API_KEY = "sk-2e3ef372d4dd4c56a6a5eaa64d44635b"
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 
 SAVE_DIR = "saves"
